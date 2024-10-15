@@ -48,7 +48,7 @@ BABATHAP_COMMAND = ["gf", "bf", "babathap", "sasuke", "wanglin", "love"]
 @nexichat.on_message(filters.command(BABATHAP_COMMAND))
 async def shayri(client: Client, message: Message):
     await message.reply_text(
-        text=random.choice(SHAYRI),
+        text=random.choice(BABATHAP),
         reply_markup=InlineKeyboardMarkup(
             [
                 [
