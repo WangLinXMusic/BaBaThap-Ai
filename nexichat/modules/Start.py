@@ -24,12 +24,13 @@ from nexichat.modules.helpers import (
 )
 
 STICKER = [
-    "CAACAgUAAxkBAAMZZw4WQ3jPUGoJ5P6R5SqwjQMMgBQAAv0JAALVS_FWQY7kbQSaI-g2BA",
+"CAACAgUAAxkBAAMZZw4WQ3jPUGoJ5P6R5SqwjQMMgBQAAv0JAALVS_FWQY7kbQSaI-g2BA",
     
-  "CAACAgQAAxkBAAMYZw4L4-P-XiKUeQmbMRrmt7QxBx8AAl4MAAIIRrlTlqJiGgcnC-42BA",
-    "CAACAgUAAxkBAAMUZw4LFwyUtk8Cf5AN3DxFHgdcFqcAAnEFAAL4sclXZIS",
+"CAACAgQAAxkBAAMYZw4L4-P-XiKUeQmbMRrmt7QxBx8AAl4MAAIIRrlTlqJiGgcnC-42BA",
     
- "CAACAgUAAxkBAAMWZw4LVk5cRs2vgXBZOvdH6JCbGVkAAvEDAAIbN8lXsrFTqNHgvD42BA",
+"CAACAgUAAxkBAAMUZw4LFwyUtk8Cf5AN3DxFHgdcFqcAAnEFAAL4sclXZIS",
+    
+"CAACAgUAAxkBAAMWZw4LVk5cRs2vgXBZOvdH6JCbGVkAAvEDAAIbN8lXsrFTqNHgvD42BA",
 ]
 
 
@@ -268,7 +269,7 @@ async def ping(_, message: Message):
 
     ms = (datetime.now() - start).microseconds / 1000
     await loda.edit_text(
-        text=f"нey вαву!!\n{nexichat.name} ᴄʜᴀᴛʙᴏᴛ ιѕ alιve 🥀 αnd worĸιng ғιne wιтн a pιng oғ\n➥ `{ms}` ms\n\n<b>|| мαdє ωιтн ❣️ ву [ᴠɪᴘ ʙᴏʏ](https://t.me/{OWNER_USERNAME}) ||</b>",
+        text=f"нey вαву!!\n{nexichat.name} ᴄʜᴀᴛʙᴏᴛ ιѕ alιve 🥀 αnd worĸιng ғιne wιтн a pιng oғ\n➥ `{ms}` ms\n\n<b>|| мαdє ωιтн ❣️ ву [ωαиɢ ℓιи](https://t.me/{OWNER_USERNAME}) ||</b>",
         reply_markup=InlineKeyboardMarkup(PNG_BTN),
     )
     if message.chat.type == ChatType.PRIVATE:
@@ -446,7 +447,7 @@ async def broadcast_message(client, message):
                         logger.warning(
                             f"FloodWait of {flood_time} seconds encountered for chat {chat_id}."
                         )
-                        if flood_time > 200:
+                        if flood_time > 30:
                             logger.info(
                                 f"Skipping chat {chat_id} due to excessive FloodWait."
                             )
@@ -482,7 +483,7 @@ async def broadcast_message(client, message):
                         logger.warning(
                             f"FloodWait of {flood_time} seconds encountered for user {user_id}."
                         )
-                        if flood_time > 200:
+                        if flood_time > 30:
                             logger.info(
                                 f"Skipping user {user_id} due to excessive FloodWait."
                             )
